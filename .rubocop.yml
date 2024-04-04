@@ -4,7 +4,7 @@ require:
   - rubocop-rake
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.1
   NewCops: enable
   SuggestExtensions: false
   Exclude:
@@ -16,6 +16,11 @@ Layout/LineLength:
   Max: 100
   Exclude:
     - "test/**/*"
+
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - "test/**/*"
+
 Metrics/BlockLength:
   Enabled: false
 Metrics/MethodLength:
@@ -27,6 +32,9 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Enabled: false
 Metrics/ClassLength:
+  Enabled: false
+
+Style/CaseEquality:
   Enabled: false
 Style/Documentation:
   Enabled: false

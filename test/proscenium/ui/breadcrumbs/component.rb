@@ -3,6 +3,7 @@
 require 'view_helper'
 
 describe Proscenium::UI::Breadcrumbs::Component do
+  include TestHelper
   extend ViewHelper
 
   def before

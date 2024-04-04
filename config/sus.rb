@@ -8,3 +8,4 @@ Bundler.require :default, :test
 
 require 'proscenium'
 require_relative '../fixtures/dummy/config/environment'
+require_relative 'test_helper'

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/joeldrapper/literal.git
-  revision: 455f225574dbcb39b7e325a9f75c928a79ec812b
+  revision: b2f3da14e64fafb3afc8401275a60cada6462986
   specs:
     literal (0.1.0)
       concurrent-ruby (~> 1.2)
@@ -121,6 +121,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    amazing_print (1.6.0)
     ast (2.4.2)
     base64 (0.2.0)
     benchmark-ips (2.13.0)
@@ -143,6 +144,10 @@ GEM
     cuprite (0.15)
       capybara (~> 3.0)
       ferrum (~> 0.14.0)
+    database_cleaner-active_record (2.1.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     date (3.3.4)
     debug (1.9.1)
       irb (~> 1.10)
@@ -353,9 +358,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  amazing_print
   benchmark-ips
   capybara
   cuprite
+  database_cleaner-active_record
   debug
   dry-initializer
   fakefs

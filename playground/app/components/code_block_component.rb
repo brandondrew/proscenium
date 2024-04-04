@@ -7,13 +7,13 @@ class CodeBlockComponent < ApplicationComponent
 
   attribute :syntax, _Nilable(_Union(String, Symbol)), positional: true
 
-  def template(&block)
-    @code = capture(&block)
+  def template(&)
+    @code = capture(&)
     @code = HtmlBeautifier.beautify(@code) if @syntax == :html
 
     div class: :@base do
       legend { @syntax }
-      pre class: :highlight, data: data do
+      pre(class: :highlight, data:) do
         @syntax ? unsafe_raw(FORMATTER.format(lexer.lex(@code))) : @code
       end
     end
@@ -22,7 +22,7 @@ class CodeBlockComponent < ApplicationComponent
   private
 
   def data
-    { language: @syntax, lines: lines }
+    { language: @syntax, lines: }
   end
 
   def lines
