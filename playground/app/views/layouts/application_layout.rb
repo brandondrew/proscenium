@@ -4,11 +4,15 @@ class ApplicationLayout < ApplicationView
   include Phlex::Rails::Helpers::CSPMetaTag
   include Phlex::Rails::Helpers::CSRFMetaTags
 
+  def markdown(content)
+    render Phlex::Markdown.new(content.squish)
+  end
+
   def page_title
     'Proscenium'
   end
 
-  def around_template(&block)
+  def around_template(&)
     doctype
 
     html do

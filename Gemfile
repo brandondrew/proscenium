@@ -24,6 +24,7 @@ group :development do
   gem 'htmlbeautifier'
   gem 'literal', github: 'joeldrapper/literal'
   gem 'phlexible'
+  gem 'phlex-markdown', github: 'phlex-ruby/phlex-markdown'
   gem 'rouge'
 end
 
